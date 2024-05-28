@@ -1,0 +1,45 @@
+.title{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+}
+.field{
+    padding: 4px;
+    width: 200px;
+    font-family: Georgia , serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.field:focus{
+    border-width:thin;
+}
+.centered{
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+.form{
+    font-family: Garamond, serif ;
+    padding: 8px;
+    background-color: aliceblue;
+    border-radius: 8px ;
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 50px;
+    padding: 2px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+    margin-left: -80px;
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}

@@ -1,0 +1,64 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="main.css">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       <script src="function.js">
+        function add_commas(){
+            var num = document.getElementById("income");
+            num = num.tolocaleString("en-US");
+            document.getElementById("income").innerHTML = num;
+        }
+       </script>
+    </head>
+    <body style="background-color: whitesmoke;">
+        <div align="Center">
+        <p class="title">New Tax Regime</p>
+        <table border="0" class="form">
+            <form name="tax">
+                <tr>
+                    <th align="left">Enter Your Salaried Income: </th>
+                    <td><input type="number" id="income" name="income" class="field" onclick="add_commas();"></td>
+                </tr>
+                <tr>
+                    <th align="left">Residential Status: </th>
+                    <td><select id="res_status" name="resident" class="field" >
+                        <option value="Indian" id="0">Resident Indian</option>
+                        <option value="NRI" id="1">Non Resident Indian</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th align="left">Standard Deduction:</th>
+                    <td><select name="std" id="std" class="field">
+                        <option value="Yes" id="0">Yes</option>
+                        <option value="No" id="1">No</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th align="left">Contributions in NPS:</th>
+                    <td><input type="number" id="NPS" class="field"></td>
+                </tr>
+                <tr align="left">
+                    <th>Other deductions(if any): </th>
+                    <td><input type="number" id="others" class="field"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                    <input type="submit" value="Calculate" 
+                        onclick=
+                        "resident_status();
+                        calculate_new_tax();
+                        return false;" >
+                    <input type="Reset" value="Clear">
+                    </td>
+                </tr>
+            </form>
+        </table>
+        </div>
+        <div align="center">
+            <h3 class="title">
+                 <h1 id="output"></h1>
+            </h3>
+        </div>
+    </body>
+</html>
